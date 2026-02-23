@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahtzee - Modern Pass & Play</title>
+  <script type="module" crossorigin src="/yahtzee/assets/index-DxZNxvcb.js"></script>
+  <link rel="stylesheet" crossorigin href="/yahtzee/assets/index-DWtDE25o.css">
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="theme-toggle">
+                <button id="theme-btn" aria-label="Toggle Dark Mode">
+                    <span class="icon">🌓</span>
+                </button>
+            </div>
+            <div class="header-controls">
+                <button id="abandon-btn" class="secondary-btn small">Abandon</button>
+                <button id="restart-btn" class="secondary-btn small">Restart</button>
+            </div>
+            <div class="player-avatars" id="player-avatars">
+                <!-- Players will be injected here -->
+                <button id="add-player-btn" class="avatar add-btn" title="Add Player">+</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="game-container">
+                <div class="dice-area">
+                    <div id="dice-container" class="dice-container">
+                        <!-- 5 Dice will be injected here -->
+                    </div>
+                    <div class="roll-controls">
+                        <button id="roll-btn" class="primary-btn">Roll Dice (3 left)</button>
+                        <button id="next-btn" class="primary-btn hidden">End Turn</button>
+                    </div>
+                </div>
+
+                <div class="scoreboard-area">
+                    <table id="scoreboard" class="scoreboard">
+                        <thead>
+                            <tr id="player-headers">
+                                <th>Category</th>
+                                <!-- Player names will be injected here -->
+                            </tr>
+                        </thead>
+                        <tbody id="score-rows">
+                            <!-- Score categories will be injected here -->
+                        </tbody>
+                        <tfoot>
+                            <tr id="grand-total-row">
+                                <td>Grand Total</td>
+                                <!-- Totals will be injected here -->
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+            <section class="history-area">
+                <h2>Game History</h2>
+                <table id="history-table" class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Game</th>
+                            <!-- Player cols -->
+                        </tr>
+                    </thead>
+                    <tbody id="history-rows">
+                        <!-- History rows -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
